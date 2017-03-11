@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;/*reset page*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+	color:inherit;
+    text-decoration: none;
+}
+/* background image */
+body {
+    margin: 0;/*reset page*/
+	background-image: none;
+	background-repeat: repeat;
+	background-position: top;
+	background-size: 30%;
+    z-index: -10;
+    color: white;
+    overflow-x: hidden;
+}
+/* overall background color */
+body:after{
+  content: "";
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  z-index: -11;
+  background-color:#282334
+}
+.vert-centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.vert-list{
+	display: flex;
+	flex-direction: column;
+}
+/* BASICS ^ */
+/* FORM */
+.searchr input{
+  position: relative;
+  width: 50%;
+  min-width: 350px;
+  padding:10px;
+  border:5px solid darkseagreen;
+  border-radius: 100px;
+  background-color: transparent;
+  color:papayawhip
+}
+.searchr button{
+  padding:10px;
+  border:5px solid limegreen;
+  border-radius: 100px;
+  background-color: transparent;
+  color:papayawhip
+}
+button {
+    font-size: 1.2em;
+    padding: 3px 9px;
+	cursor: pointer;
+}
+button:active {
+    transform:scale(0.96);
+}
+/* */
+#sidebar {
+    background:#201929;
+    z-index: 99;
+}
+#content {
+    transition: transform 0.3s ease;
+    overflow-x: hidden;
+}
+
+.repo {
+    padding:0em 1.5em;
+	cursor: move;
+    margin-top: 4px;
+    background-color: rgba(200,190,190,0.1);
+    border: 1px solid rgba(170,150,150,0.2);
+}
+
+#new-grouping {
+    position:relative;
+}
+
+#new-grouping > .grouping-title{
+    border-right: 2px outset lightpink;
+    border-bottom-right-radius: 30px; 
+}
+
+.grouping {
+    display:flex;
+    flex-direction: column;
+    border-left: 1px solid #657;
+    width: 300px;
+    min-height: 10%;
+}
+
+.grouping-title {
+    font-size: 1.4em;
+    padding:1em 1.5em;
+    background-color: rgba(200,190,190,0.2);
+    border-bottom: 2px outset lightpink;
+}
+
+.grouping-list {
+    display:flex;
+    flex-direction: column;
+    transition: all 1s ease;
+    min-height: 100vh;
+    
+    background-color: rgba(20,10,10,0.1);
+    border:1px solid rgba(20,10,10,0.15);
+    border-radius: 10px;
+}
+
+.grouping-list-hover {
+    background-color: rgba(200,255,200,0.4);
+}
+
+.big-plus::after {
+    content: "+";
+    position: absolute;
+    font-size:5em;
+    top:50vh;
+    left:50%;
+    transform: translateX(-50%);
+}
+/* ui drag */
+
+.ui-draggable-dragging {
+    border: "0px solid transparent";
+}
+
